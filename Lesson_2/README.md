@@ -16,7 +16,7 @@
 
 2i. Calculate Order total at the bottom.
 
-***Setup in the Amazon project, go to the home page and add a toaster ($18.99) to your cart so you have 1 basketball, 1 t-shirt, and 1 toaster.Choose $4.99 shipping for the toaster
+### Setup in the Amazon project, go to the home page and add a toaster ($18.99) to your cart so you have 1 basketball, 1 t-shirt, and 1 toaster.Choose $4.99 shipping for the toaster ###
 
 2j. Let's say we want to always round a number down (2.8 => 2) Using Google or an A.l. tool, search for the code to do this.
 
