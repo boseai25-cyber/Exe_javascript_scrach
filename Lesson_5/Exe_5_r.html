@@ -1,0 +1,125 @@
+<!--Create the rest of the buttons in the calculator. To create multiple rows of buttons, put the buttons inside <p> elements like this:
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <title>calculater</title>
+  </head>
+  <body>
+    <p>
+      <button onclick="
+      calculation = '';
+      console.log(calculation);
+      ">c</button>
+    
+    <button onclick="
+      Calculation += '(';
+      console.log(Calculation);
+      ">(</button>
+    
+    <button onclick="
+      Calculation += ')';
+      console.log(calculation);
+      ">)</button>
+    
+    <button onclick="
+      calculation += ' / ';
+      console.log(calculation);
+      ">/</button>
+    </p>
+
+    
+    <p>
+      <button onclick="
+      calculation += '7';
+      console.log(calculation);
+      ">7</button>
+    
+    <button onclick="
+      Calculation += '8';
+      console.log(Calculation);
+      ">8</button>
+    
+    <button onclick="
+      Calculation += '9';
+      console.log(calculation);
+      ">9</button>
+    
+    <button onclick="
+      calculation += ' * ';
+      console.log(calculation);
+      ">×</button>
+    </p>
+    
+    <p>
+      <button onclick="
+      calculation += '4';
+      console.log(calculation);
+      ">4</button>
+    
+    <button onclick="
+      Calculation += '5';
+      console.log(Calculation);
+      ">5</button>
+    
+    <button onclick="
+      Calculation += '6';
+      console.log(calculation);
+      ">6</button>
+    
+    <button onclick="
+      calculation += ' - ';
+      console.log(calculation);
+      ">-</button>
+    </p>
+      
+    <p>
+      <button onclick="
+        calculation += '1';
+        console.log(calculation);
+      ">1</button>
+    
+      <button onclick="
+        Calculation += '2';
+        console.log(Calculation);
+      ">2</button>
+    
+      <button onclick="
+        Calculation += '3';
+        console.log(calculation);
+      ">3</button>
+    
+      <button onclick="
+        calculation += ' + ';
+        console.log(calculation);
+      ">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+      calculation += ' * 0.1';
+      console.log(calculation);
+      ">%</button>
+    
+    <button onclick="
+      Calculation += '0';
+      console.log(Calculation);
+      ">o</button>
+    
+    <button onclick="
+      Calculation += '.';
+      console.log(calculation);
+      ">.</button>
+    
+    <button onclick="
+      calculation = eval(calculation);
+      console.log(calculation);
+      ">=</button>
+    </p>
+    
+  </body>
+  <script>
+    var calculation ='';
+  </script>
+</html>
