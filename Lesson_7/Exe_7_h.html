@@ -1,0 +1,45 @@
+<!--Update convertLength to support converting between km, miles, and also feet. Note: 1 mile = 5280 ft, 1 km = 3281 ft (approximately).
+convertLength(5, 'miles', 'km') => '8 km'
+convertLength(5, 'miles', 'ft') => '26400 ft'
+convertLength(5, 'km', 'ft') => '16405 ft'
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <title>length convertion</title>
+  </head>
+  <body>
+    
+    <script>
+
+      console.log(convertLength(50, 'miles', 'km'));
+      console.log(convertLength(32, 'km', 'miles'));
+      console.log(convertLength(50, 'km', 'km'));
+
+      console.log(convertLength(5, 'miles', 'km'));
+      console.log(convertLength(5, 'miles', 'ft'));
+      console.log(convertLength(5, 'km', 'ft'));
+      
+      function convertLength (length, from, to) {
+        if (from === 'miles' && to === 'km') {
+          let result = ` ${(length * 1.6) + to}`;
+        } else if (from === to) {
+          let result = length;
+        } else if (from === 'km' && to === 'miles') {
+          let result = `${(length / l.6) + to}`;
+        } else if (from === 'miles' && to === 'ft'){
+          let result = `${(length * 5280) + to}`;
+        } else if (from === 'km' && to === 'ft') {
+          let result = `${(length * 3281) + to}`;
+        } else if (from === 'ft' && to === 'km') {
+          let result = `${(length / 3281) + to}`;
+        } else if (from === 'ft' && to === 'miles') {
+          let result = `${(length / 5280) + to}`;
+        }
+
+        return result;
+      }
+    </script>
+  </body>
+</html>
