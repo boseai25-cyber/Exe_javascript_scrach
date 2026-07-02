@@ -7,17 +7,11 @@
     <title>coin tass game</title>
   </head>
   <script>
-    let randomNumber = Math.random();
-    let result = '';
-    let guess = 'tails';
+    const randomNumber = Math.random();
+    const result = randomNumber >= 0.5 ? 'heads' : 'tails';
+    const guess = 'tails';
     
-    if (randomNumber >= 0.5) {
-      result = 'heads';
-    } else {
-      result = 'tails';
-    }
-
-    guess === result ? alert('you win'); : alert('you lose');
+    console.log(guess === result ? 'you win': 'you lose');
     
   </script>
 </html>
