@@ -1,0 +1,28 @@
+<!--Let's say we're trying to guess the result. Create a variable called 'guess' and save your guess ('heads' or 'tails').
+If your guess matches the result, display 'You win!' in the console
+If your guess does not match the result, display 'You lose!'
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <title>coin tass game</title>
+  </head>
+  <script>
+    let randomNumber = Math.random();
+    let result = '';
+    let guess = 'tails';
+    
+    if (randomNumber >= 0.5) {
+      result = 'heads';
+    } else {
+      result = 'tails';
+    }
+
+    if (guess === result) {
+      alert('you win');
+    } else {
+      alert('you lose');
+    }
+  </script>
+</html>
