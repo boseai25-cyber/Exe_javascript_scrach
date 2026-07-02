@@ -1,0 +1,30 @@
+<!--Create a function 'convertTemperature(degrees, unit)' that takes a number and a unit ('C' or 'F'), and converts it into the other unit.
+convertTemperature (25, 'C') => '77F'
+convertTemperature (86, 'F') => '30C'
+Note: return a string, and try to reuse the functions from 7d and 7e.
+-->
+
+<!doctype html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+
+    console.log(convertTemperature(25, 'c'));
+    console.log(convertTemperature(25, 'F'));
+    
+    <script>
+      
+      function convertTemperature (degrees, unit) {
+        if (unit === 'F'){
+          let Temperature = (`${(Fahrenheit - 32) * 5 / 9}C`);
+        } else {
+          let Temperature = (`${(celsius * 9 / 5) + 32}F`);
+
+          return Temperature;
+        }
+    
+    </script>
+  </body>
+</html>
