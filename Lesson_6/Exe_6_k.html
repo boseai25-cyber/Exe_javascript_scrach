@@ -13,19 +13,25 @@ Otherwise, update the quantity and console.log() it as usual.
 
     let quantity = 0;
       
-    if (quantity >= 10) {  
+    
     <button onclick="
-      quantity += 4;
-      Console.log(quantity);
-      ">+4</button>
+      if (quantity + 4 >= 10) {  
+        alert('the card is full');
+      } else{
+        quantity += 4;
+        Console.log(quantity);
+        ">+4</button>
+      }
 
     <button onclick="
-      quantity += 5;
-     Console.log(quantity);
-      ">+5</button>
-    } else {
-      alert('The card is full');
-    }
+      if (quantity + 5 >= 10) {  
+        alert('the card is full');
+      } else{
+        quantity += 5;
+        Console.log(quantity);
+        ">+5</button>
+      } 
+      
 
     <button onclick="
       quantity -= 1;
