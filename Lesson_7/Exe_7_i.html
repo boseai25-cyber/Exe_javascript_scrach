@@ -1,0 +1,49 @@
+<!--Update convertLength so that if you give it an invalid unit, it will return Invalid unit: ${unit}`.
+convertLength(5, 'lbs', 'lbs') => 'Invalid unit: Ibs'
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <title>length convertion</title>
+  </head>
+  <body>
+    
+    <script>
+
+      console.log(convertLength(50, 'miles', 'km'));
+      console.log(convertLength(32, 'km', 'miles'));
+      console.log(convertLength(50, 'km', 'km'));
+
+      console.log(convertLength(5, 'miles', 'km'));
+      console.log(convertLength(5, 'miles', 'ft'));
+      console.log(convertLength(5, 'km', 'ft'));
+      
+      console.log(convertLength(5, 'lbs', 'lbs'));
+      
+      function convertLength (length, from, to) {
+        if (from === 'miles' && to === 'km') {
+          let result = ` ${(length * 1.6) + to}`;
+        } else if (from === to) {
+          let result = length;
+        } else if (from === 'km' && to === 'miles') {
+          let result = `${(length / l.6) + to}`;
+        } else if (from === 'miles' && to === 'ft'){
+          let result = `${(length * 5280) + to}`;
+        } else if (from === 'km' && to === 'ft') {
+          let result = `${(length * 3281) + to}`;
+        } else if (from === 'ft' && to === 'km') {
+          let result = `${(length / 3281) + to}`;
+        } else if (from === 'ft' && to === 'miles') {
+          let result = `${(length / 5280) + to}`;
+        } else if (!from === 'miles' && !from === 'km' && !from === 'ft' ) {
+          let result = `Invalid units: ${from}`;
+        } else {
+          let result = `Invalid units: ${to}`;
+        }
+
+        return result;
+      }
+    </script>
+  </body>
+</html>
