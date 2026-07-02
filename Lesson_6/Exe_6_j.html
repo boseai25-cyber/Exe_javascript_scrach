@@ -1,0 +1,23 @@
+<!--(Challenge) Instead of using if-statements in the previous exercises, try switching them into ternary operators (condition? A : B).
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <title>coin tass game</title>
+  </head>
+  <script>
+    let randomNumber = Math.random();
+    let result = '';
+    let guess = 'tails';
+    
+    if (randomNumber >= 0.5) {
+      result = 'heads';
+    } else {
+      result = 'tails';
+    }
+
+    guess === result ? alert('you win'); : alert('you lose');
+    
+  </script>
+</html>
