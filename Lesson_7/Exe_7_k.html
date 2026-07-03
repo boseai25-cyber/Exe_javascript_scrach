@@ -1,0 +1,60 @@
+<!--Create a copy of the Cart Quantity project from exercise 61.
+Create a function 'updateCartQuantity' and reuse the code.
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <title>cart quantity project </title>    
+  </head>
+  <body>
+    <script>
+
+    let quantity = 0;
+      
+    
+    <button onclick="
+        Console.log(updateCardQuantity(+4));
+        ">+4</button>
+      
+
+    <button onclick="
+        Console.log(updateCardQuantity(+5));
+        ">+5</button>
+      
+      
+    
+    <button onclick="
+        Console.log(updateCardQuantity(-1));
+        ">Remove from cart</button>
+      
+    
+    <button onclick="
+        console.log(updateCardQuantity(-2));
+        ">-2</button>
+    
+    <button onclick="
+     console.log(updateCardQuantity(-3));
+        ">-3</button>
+      
+
+      function updateCardQuantity(button) {
+        
+        if (button >= 0){
+          
+          if (quantity + button >= 10) {  
+            alert('the card is full');
+          } else {
+            quantity += button ;
+          }
+        } else if (button <= 0){
+          if (quantity - button >= 10) {  
+            alert('the card is full');
+          } else {
+            quantity -= button ;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
