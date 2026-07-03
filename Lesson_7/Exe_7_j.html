@@ -1,0 +1,120 @@
+<!--Create a copy of the Calculator project from exercise 5r (if you didn't do 5r, copy the code for 5r from the solutions).
+Notice there's a lot of duplicated code in the buttons.
+Create a function 'updateCalculation' and reuse the code.
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <title>calculater</title>
+  </head>
+  <body>
+    <p>
+      <button onclick="
+      console.log(calculation());
+      ">c</button>
+    
+      <button onclick="
+      console.log(calculation('('));
+      ">(</button>
+    
+      <button onclick="
+      console.log(calculation(')'));
+      ">)</button>
+    
+      <button onclick="
+      console.log(calculation' / ');
+      ">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+      console.log(calculation('7'));
+      ">7</button>
+    
+      <button onclick="
+      console.log(calculation('8'));
+      ">8</button>
+    
+      <button onclick="
+      console.log(calculation('9'));
+      ">9</button>
+    
+      <button onclick="
+      console.log(calculation(' * '));
+      ">×</button>
+    </p>
+    
+    <p>
+      <button onclick="
+      console.log(calculation('4'));
+      ">4</button>
+    
+      <button onclick="
+      console.log(calculation('5'));
+      ">5</button>
+    
+      <button onclick="
+      console.log(calculation('6'));
+      ">6</button>
+    
+      <button onclick="
+      console.log(calculation(' - '));
+      ">-</button>
+    </p>
+      
+    <p>
+      <button onclick="
+        console.log(calculation('1'));
+      ">1</button>
+    
+      <button onclick="
+        console.log(calculation('2'));
+      ">2</button>
+    
+      <button onclick="
+        console.log(calculation('3'));
+      ">3</button>
+    
+      <button onclick="
+        console.log(calculation(' + '));
+      ">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+      console.log(calculation(' % '));
+      ">%</button>
+    
+      <button onclick="
+      console.log(calculation('0'));
+      ">0</button>
+    
+      <button onclick="
+      console.log(calculation('.'));
+      ">.</button>
+    
+      <button onclick="
+      console.log(calculation(' = '));
+      ">=</button>
+    </p>
+    
+  </body>
+  <script>
+    
+    function calculation (button) {
+      
+      if (!button === ' = ' ) {
+        result += 'button';
+      }else if (button === 'c') {
+        result = '';
+      } else {
+        result = eval(result);
+      }
+      
+      return result;
+    }
+    
+    var calculation = '';
+  </script>
+      </html>
