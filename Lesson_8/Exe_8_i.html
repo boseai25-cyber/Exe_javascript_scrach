@@ -1,0 +1,33 @@
+<!--We'll improve the coin flip game from exercise 6j to be like the rock paper scissors game.
+Copy the code from exercise 6j (see the solution for 6j if needed).
+Create 2 buttons to play the game
+When clicking 'heads' play the game with guess = 'heads'.
+When clicking 'tails' play the game with guess = 'tails'.
+Create a function 'playGame(guess)' to reuse the code.
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <title>coin tass game</title>
+  </head>
+  <body>
+    <button onclick="
+      playgame('heads');
+      ">head</button>
+
+    <button onclick="
+      playgame('tails');
+      ">tails</button>
+    
+  <script>
+
+    function playgame (guess) {
+      const randomNumber = Math.random();
+      const result = randomNumber >= 0.5 ? 'heads' : 'tails';
+    
+      console.log(guess === result ? 'you win': 'you lose');
+    }
+  </script>
+  </body>
+</html>
