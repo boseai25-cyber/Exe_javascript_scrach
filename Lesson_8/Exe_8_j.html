@@ -1,0 +1,45 @@
+<!--Create a score object { wins: 0, losses: 0 }, update the score each time after playing, and display the score in the console.
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <title>coin tass game</title>
+  </head>
+  <body>
+    <button onclick="
+      playgame('heads');
+      ">head</button>
+
+    <button onclick="
+      playgame('tails');
+      ">tails</button>
+    
+  <script>
+    let score = {
+      wins: 0
+      loses: 0
+    };
+
+    function playgame (guess) {
+      const randomNumber = Math.random();
+      const result = randomNumber >= 0.5 ? 'heads' : 'tails';
+      result(result, guess);
+    
+    }
+
+    function result(result, guess) {
+      if (result === guess) {
+        alert(`you win 
+        ${score}`);   
+        score.wins += 1;
+      } else {
+        alert(`you lose
+        ${score}`);
+        score.lose += 1;
+      }
+    }
+    
+  </script>
+  </body>
+</html>
