@@ -1,0 +1,45 @@
+<!--Use localStorage to save and load the score (hint: you'll need to use JSON.stringify() to convert the score object to a string).
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <title>coin tass game</title>
+  </head>
+  <body>
+    <button onclick="
+      playgame('heads');
+      ">head</button>
+
+    <button onclick="
+      playgame('tails');
+      ">tails</button>
+    
+  <script>
+    let score = JSON.parse('score', localStorage.getItem(score)) || {
+      wins: 0,
+      loses: 0
+    };
+
+    function playgame (guess) {
+      const randomNumber = Math.random();
+      const result = randomNumber >= 0.5 ? 'heads' : 'tails';
+      result(result, guess);
+      localStorage.setItem('score', JSON.stringify(score));    
+    }
+
+    function result(result, guess) {
+      if (result === guess) {
+        alert(`you win 
+        ${score}`);   
+        score.wins += 1;
+      } else {
+        alert(`you lose
+        ${score}`);
+        score.lose += 1;
+      }
+    }
+    
+  </script>
+  </body>
+</html>
