@@ -2,3 +2,122 @@
 When the page first loads, get the calculation using.getItem()
 Use a default value of " if a calculation doesn't exist in local storage
 -->
+
+<!doctype html>
+<html>
+  <head>
+    <title>calculater</title>
+  </head>
+  <body>
+    <p>
+      <button onclick="
+      console.log(calculation());
+      ">c</button>
+    
+      <button onclick="
+      console.log(calculation('('));
+      ">(</button>
+    
+      <button onclick="
+      console.log(calculation(')'));
+      ">)</button>
+    
+      <button onclick="
+      console.log(calculation' / ');
+      ">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+      console.log(calculation('7'));
+      ">7</button>
+    
+      <button onclick="
+      console.log(calculation('8'));
+      ">8</button>
+    
+      <button onclick="
+      console.log(calculation('9'));
+      ">9</button>
+    
+      <button onclick="
+      console.log(calculation(' * '));
+      ">×</button>
+    </p>
+    
+    <p>
+      <button onclick="
+      console.log(calculation('4'));
+      ">4</button>
+    
+      <button onclick="
+      console.log(calculation('5'));
+      ">5</button>
+    
+      <button onclick="
+      console.log(calculation('6'));
+      ">6</button>
+    
+      <button onclick="
+      console.log(calculation(' - '));
+      ">-</button>
+    </p>
+      
+    <p>
+      <button onclick="
+        console.log(calculation('1'));
+      ">1</button>
+    
+      <button onclick="
+        console.log(calculation('2'));
+      ">2</button>
+    
+      <button onclick="
+        console.log(calculation('3'));
+      ">3</button>
+    
+      <button onclick="
+        console.log(calculation(' + '));
+      ">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+      console.log(calculation(' % '));
+      ">%</button>
+    
+      <button onclick="
+      console.log(calculation('0'));
+      ">0</button>
+    
+      <button onclick="
+      console.log(calculation('.'));
+      ">.</button>
+    
+      <button onclick="
+      console.log(calculation(' = '));
+      ">=</button>
+    </p>
+    
+  </body>
+  <script>
+    
+    function calculation (button) {
+      
+      if (!button === ' = ' ) {
+        result += 'button';
+        localStorage.setitem('result', result);
+      }else if (button === 'c') {
+        result = '';
+        localstorage.removeitem('result', result);
+      } else {
+        result = eval(result);
+        localstorage.getitem('result', result);
+      }
+      
+      return result;
+    }
+    
+    var calculation = '';
+  </script>
+        </html>
