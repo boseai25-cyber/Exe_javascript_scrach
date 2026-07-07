@@ -1,0 +1,32 @@
+<!--Continuing from 9e, create a function to reuse the code (if you already did this, skip this exercise).
+-->
+
+<!doctype html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+
+    <input placeholder="you name" class="js-input"
+      onkeydown="
+      if (event.key === 'Enter') {
+        displayName();
+      }">
+
+    <button onclick="
+      displayName();
+      ">submit</button>
+        
+    <p class="js-name"></p>
+    
+    <script>
+      
+      function displayName() {
+        cost name = document.querySelector('.js-input');
+        document.querySelector('.js-name").innerHTML = `Youer name is: ${name.value}`;
+      }
+      
+    </script>
+  </body>
+</html>
