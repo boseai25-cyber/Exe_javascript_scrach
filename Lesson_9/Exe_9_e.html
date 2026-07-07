@@ -1,0 +1,26 @@
+<!--Modify exercise 9d so that when you press 'Enter' in the <input>, it will also display the same message on the page (hint: use onkeydown and the event object).
+-->
+
+<!doctype html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+
+    <input placeholder="you name" class="js-input"
+      onkeydown="
+      if (event.key === 'Enter') {
+        cost name = document.querySelector('.js-input')
+        document.querySelector('.js-name").innerHTML = `Youer name is: ${name.value}`"
+      }">
+
+    <button onclick="
+      cost name = document.querySelector('.js-input')
+      document.querySelector('.js-name").innerHTML = `Youer name is: ${name.value}`">submit</button>
+
+    <p class="js-name"></p>
+    
+    
+  </body>
+</html>
