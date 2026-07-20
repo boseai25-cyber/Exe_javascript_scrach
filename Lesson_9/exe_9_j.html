@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calculater</title>
+    </head>
+    <body>
+
+        <p class="js_displayCalculation"> </p>
+        <p class="js_displayResult"> </p>
+
+        <p></p>
+
+        <p>
+            <button onclick="calculate('7')" >7</button>
+            <button onclick="calculate('8')">8</button>
+            <button onclick="calculate('9')">9</button>
+            <button onclick="calculate(' * ')">x</button>
+        </p>
+
+        <p>
+            <button onclick="calculate('4')">4</button>
+            <button onclick="calculate('5')">5</button>
+            <button onclick="calculate('6')">6</button>
+            <button onclick="calculate(' - ')">-</button>
+        </p>
+
+        <p>
+            <button onclick="calculate('1')">1</button>
+            <button onclick="calculate('2')">2</button>
+            <button onclick="calculate('3')">3</button>
+            <button onclick="calculate(' + ')">+</button>
+        </p>
+
+        <p>
+            <button onclick="calculate('=')">=</button>
+            <button onclick="calculate('0')">0</button>
+            <button onclick="calculate('.')">.</button>
+            <button onclick="calculate('clear')">clear</button>
+        </p>
+
+        <script>
+
+            let calculation = '';
+            let result  = '';
+
+            function calculate(button) {
+                if (button !== '=' && button !== 'clear') {
+                    calculation += button;
+                    storeData()
+                    displayCalculation()
+                } else if (button === '=') {
+                    result = eval(calculation);
+                    calculation = '';
+                    displayCalculation()
+                    displayResult()
+                } else if (button === 'clear') {
+                    calculation = '';
+                    result = '';
+                    clearData()
+                    displayResult()
+                    displayCalculation()
+                }else {
+                    result = 'sindex error';
+                    displayResult()
+                }
+            }
+
+            function storeData() {
+                localStorage.setItem('calculation',calculation);
+                localStorage.setItem('result',result);
+            }
+
+            function getData() {
+               calculation = localStorage.getItem('calculation');
+               result = localStorage.getItem('result');
+               displayCalculation()
+               displayResult()
+            }
+
+            function clearData() {
+                localStorage.removeItem('calculation');
+                localStorage.removeItem('result');
+            }
+
+            function displayCalculation() {
+                document.querySelector('.js_displayCalculation').innerHTML = `${calculation}`;
+            }
+
+            function displayResult() {
+                document.querySelector('.js_displayResult').innerHTML = `${result}`;
+            } 
+            
+            getData()
+        </script>
+    </body>
+</html>

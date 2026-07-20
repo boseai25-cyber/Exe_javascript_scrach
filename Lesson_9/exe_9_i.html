@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>cart quntity</title>
+    </head>
+    <body>
+
+        <button onclick="actionOfInput('show_quantity')">show quantity</button>
+        <button onclick="actionOfInput(+1)">add to cart</button>
+        <button onclick="actionOfInput(+2)">+2</button>
+        <button onclick="actionOfInput(+3)">+3</button>
+        <button onclick="actionOfInput(+4)">+4</button>
+        <button onclick="actionOfInput(+5)">+5</button>
+        <button onclick="actionOfInput(-1)">remove from cart</button>
+        <button onclick="actionOfInput(-2)">-2</button>
+        <button onclick="actionOfInput(-3)">-3</button>
+
+        <p class="js_display"></p>
+
+        <script>
+
+            let quantity = 0;
+
+            display();
+            
+            function actionOfInput(button_attripute){
+                if (button_attripute === 'show_quantity') {
+                    display()
+                } else if (button_attripute > 0) {
+                    if (quantity + button_attripute >= 10) {
+                        alert('the card is full');
+                    } else {
+                        quantity += button_attripute;
+                        display()
+                    }
+                } else if (button_attripute < 0) {
+                    if (quantity + button_attripute < 0) {
+                        alert('cart is empty');
+                    } else {
+                        quantity += button_attripute;
+                        display()
+                    }
+                }
+            }
+
+            function display() {
+                document.querySelector('.js_display').innerHTML = `cart quantity: ${quantity}`;
+            }
+        </script>
+    </body>
+</html>
